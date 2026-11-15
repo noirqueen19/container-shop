@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#297ab8">
+<meta name="description" content="Автодетали Container. Автозапчасти со склада, поиск по автомобилю, бренду и складскому номеру. Корзина и заказ в чате с магазином.">
+<title>Автодетали Container — каталог запчастей</title>
+<link rel="stylesheet" href="style.css">
+<script src="config.js" defer></script>
+<script src="catalog.js" defer></script>
+<script src="app.js" defer></script>
+</head>
+<body>
+<header class="header">
+<div class="shell top-row">
+<a class="logo" href="#/" aria-label="Автодетали Container — главная"><span class="logo-bracket"><small>АВТОДЕТАЛИ</small><b>CON<br>TAINER</b></span></a>
+<form class="search" id="search-form"><label class="sr-only" for="search-input">Поиск по каталогу</label><span class="search-icon" aria-hidden="true">⌕</span><input id="search-input" type="search" autocomplete="off" placeholder="Название, артикул, автомобиль"><button class="button" type="submit">Найти</button></form>
+<a class="header-action" href="#/catalog?favorite=1" aria-label="Избранное"><span aria-hidden="true">♡</span><small>Избранное</small></a>
+<a class="header-action cart-link" href="#/cart"><span aria-hidden="true">▱</span><i id="cart-count" hidden>0</i><small>Корзина</small></a>
+</div>
+<nav class="shell nav-row" aria-label="Основное меню"><a class="button catalog-button" href="#/catalog">☰ &nbsp; Каталог</a><a href="#/catalog?selectCar=1">Подобрать по автомобилю</a><div class="nav-spacer"></div><a href="#/?slide=2">Акции</a><a href="#/delivery">Доставка и оплата</a><a href="#/contacts">Контакты</a></nav>
+</header>
+<main id="app" class="shell"><div class="loading">Открываем каталог…</div></main>
+<footer class="shell footer"><a class="footer-brand" href="#/">АВТОДЕТАЛИ CONTAINER</a><p>Санкт-Петербург · Наличие и совместимость подтверждаем при заказе.</p><a href="#/contacts">Связаться с магазином</a></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<dialog id="zoom"><button class="close" aria-label="Закрыть изображение">×</button><img alt="Фото товара в полном размере" id="zoom-image"></dialog>
+</body>
+</html>
